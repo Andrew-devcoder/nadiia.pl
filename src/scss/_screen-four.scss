@@ -1,0 +1,58 @@
+//consult
+
+.four {
+    background: #e3e3e3;
+    position: relative;
+
+    &__body {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @include breakpoint-md($md) {
+            padding: 40px 0;
+        }
+
+        @include mob {
+            flex-direction: column;
+        }
+    }
+
+    &__title {
+        max-width: 540px;
+        font-weight: 700;
+        font-size: $h2-size;
+        line-height: 65px;
+        color: $grey;
+        padding-bottom: 41px;
+
+        @include breakpoint-md($md) {
+            max-width: 450px;
+        }
+
+        @include mob {
+            font-size: $h2-size-mobile;
+        }
+    }
+
+    &__img {
+        img {
+            max-width: 100%;
+
+            @include breakpoint-md($md) {
+                position: absolute;
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+                max-width: 45%;
+            }
+
+            @include mob {
+                position: relative;
+                top: 0;
+                max-width: 100%;
+                transform: translateY(0);
+            }
+        }
+    }
+}

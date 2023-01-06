@@ -1,5 +1,15 @@
 @import "fonts";
 
-body {
-    font-family: Anton;
-}
+@import "./reset";
+@import "./variable";
+@import "./mixin";
+@import "./global";
+@import "./button";
+@import "./header";
+@import "./navigation";
+@import "./screen-first";
+@import "./screen-two"; //important section
+@import "./screen-three"; //news
+@import "./screen-four"; //consult
+@import "./screen-five"; //partners
+@import "./footer";

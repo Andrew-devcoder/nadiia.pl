@@ -1,0 +1,131 @@
+//news
+
+.sliders {
+    padding: 80px 0;
+    background: $light-grey;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint-md($md) {
+        padding: 40px 0;
+    }
+    @include mob {
+        display: none;
+    }
+
+    &__title {
+        font-weight: 700;
+        line-height: 82px;
+        font-size: $h1-size;
+        text-align: center;
+        color: $grey;
+
+        @include mob {
+            font-size: $h1-size-mobile;
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        top: 551px;
+        margin: auto;
+        margin-left: 920px;
+        cursor: pointer;
+        min-width: 100px;
+
+        &--rotate {
+            transform: rotate(180deg);
+        }
+
+        @include breakpoint-lg($lg) {
+            margin-left: 778px;
+        }
+
+        @include breakpoint-md($md) {
+            top: 650px;
+            margin-left: -11px;
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        margin-top: 64.94px;
+    }
+}
+
+.slide {
+    position: relative;
+    width: 260px;
+    height: 390px;
+
+    background: #ffffff;
+    box-shadow: -6px 10px 15px rgba(194, 194, 194, 0.4);
+    border-radius: 12px;
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        padding: 14.68px 11.79px 0 28.21px;
+    }
+
+    &__data {
+        padding-bottom: 9px;
+        font-family: "Barlow";
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 14px;
+        color: $grey;
+    }
+
+    &__title {
+        padding-bottom: 12.18px;
+        font-weight: 700;
+        font-size: 24px;
+
+        color: #404040;
+    }
+
+    &__text {
+        max-height: 88px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        padding-bottom: 0;
+        display: -webkit-box;
+        -webkit-line-clamp: 5;
+        -webkit-box-orient: vertical;
+        font-family: "Barlow";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+
+        color: $dark-grey;
+    }
+
+    &__button {
+        position: absolute;
+
+        bottom: 25.91px;
+        right: 7.79px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+.swiper-wrapper {
+    padding: 59px 0 30px;
+
+    @include breakpoint-lg($lg) {
+        display: flex;
+        gap: 35px;
+    }
+
+    @include breakpoint-md($md) {
+        gap: 96px;
+    }
+}
+
+.swiper-two {
+    position: relative;
+}

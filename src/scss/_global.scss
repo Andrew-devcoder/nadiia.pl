@@ -1,0 +1,40 @@
+body {
+    overflow-x: hidden;
+    font-family: $font-family;
+}
+h1 {
+    font-size: $h1-size;
+
+    @include mob {
+        font-size: $h1-size-mobile;
+    }
+}
+h2 {
+    font-size: $h2-size;
+
+    @include mob {
+        font-size: $h2-size-mobile;
+    }
+}
+h2 {
+    font-size: $h3-size;
+
+    @include mob {
+        font-size: $h3-size-mobile;
+    }
+}
+.container {
+    @include containerCenter;
+
+    @include breakpoint-lg($lg) {
+        @include screen-md;
+    }
+
+    @include breakpoint-md($md) {
+        @include screen-md;
+    }
+}
+
+footer {
+    color: $white;
+}

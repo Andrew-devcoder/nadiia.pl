@@ -1,0 +1,114 @@
+.screen-first {
+    position: relative;
+    padding: 36px 0 74px;
+    background: $light-grey;
+
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    @include breakpoint-md($md) {
+        padding: 18px 0 0;
+    }
+}
+.carousel {
+    @include rowBetween;
+    align-items: center;
+    margin-bottom: 57px;
+
+    min-width: 0;
+
+    @include mob {
+        flex-direction: column;
+    }
+}
+
+.text {
+    display: flex;
+    flex: auto;
+    flex-direction: column;
+    align-items: flex-start;
+
+    &__title {
+        position: absolute;
+        top: 148px;
+        z-index: 0;
+        white-space: nowrap;
+        font-weight: 700;
+        line-height: 100%;
+        color: $grey;
+
+        @include breakpoint-md($md) {
+            top: -50px;
+        }
+
+        @include mob {
+            position: relative;
+            white-space: normal;
+            width: 400px;
+        }
+    }
+
+    &__subtitle {
+        margin: 120px 0 17px;
+        font-weight: 700;
+        font-size: $title-size;
+        line-height: 33px;
+        color: $dark-grey;
+
+        @include mob {
+            font-size: $title-size-mobile;
+            margin: 0;
+        }
+    }
+
+    &__content {
+        margin-bottom: 40px;
+        max-width: 530px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 25px;
+        color: $grey;
+    }
+}
+.first-img {
+    max-width: 100%;
+
+    @include breakpoint-md($md) {
+        max-width: 50%;
+    }
+
+    @include mob {
+        max-width: 100%;
+    }
+}
+
+.scroll-carousel {
+    display: block;
+    margin: 0 auto;
+    width: 579px;
+}
+
+.swiper-horizontal > .swiper-scrollbar,
+.swiper-scrollbar.swiper-scrollbar-horizontal {
+    margin: 0 auto;
+    left: 20%;
+    bottom: 80px;
+    max-width: 60%;
+    width: 100%;
+
+    @include breakpoint-md($md) {
+        bottom: 40px;
+    }
+}
+
+.swiper-scrollbar-drag {
+    background-color: $grey;
+    cursor: pointer;
+}
+
+// .swiper-one {
+//     box-sizing: border-box;
+//     width: 100%;
+//     overflow: hidden;
+// }

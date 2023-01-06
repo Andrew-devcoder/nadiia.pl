@@ -1,0 +1,319 @@
+.footer {
+    padding: 80px 0;
+    background: $dark-grey;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+
+    @include mob {
+        padding: 30px;
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        @include mob {
+            flex-direction: column;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        &--center {
+            justify-content: center;
+        }
+    }
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+
+        img {
+            max-width: 190px;
+        }
+    }
+
+    &__text {
+        max-width: 258px;
+        font-weight: 400;
+        font-size: $text-size;
+        line-height: 25px;
+        color: $white;
+
+        @include mob {
+            font-size: $text-size-mobile;
+        }
+    }
+
+    &__icons {
+        display: flex;
+        gap: 28px;
+    }
+
+    &__languages {
+        display: flex;
+        flex-direction: row;
+        gap: 17px;
+
+        p {
+            font-family: "Open Sans";
+            font-weight: 700;
+            font-size: $text-size;
+            line-height: 25px;
+
+            @include mob {
+                font-size: $text-size-mobile;
+            }
+        }
+    }
+
+    &__sections {
+        display: flex;
+        flex-direction: row;
+        gap: 26px;
+    }
+
+    &__city {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+
+        &--row {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            p {
+                width: 16.667%;
+                font-weight: 400;
+                font-size: $text-size;
+                line-height: 25px;
+
+                @include mob {
+                    width: 30%;
+                    font-size: $text-size-mobile;
+                }
+            }
+        }
+    }
+
+    &__button {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+
+        @include mob {
+            margin: 0;
+        }
+    }
+
+    &__lists {
+        display: flex;
+        flex-direction: row;
+        gap: 90px;
+        width: 100%;
+
+        ul {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            width: 310px;
+            padding: 5px 10px;
+            border: 1px solid $grey;
+            font-weight: 400;
+            font-size: $text-size;
+            line-height: 25px;
+
+            @include mob {
+                font-size: $text-size-mobile;
+            }
+        }
+    }
+
+    &__policy {
+        display: flex;
+        flex-direction: row;
+        gap: 78px;
+
+        @include mob {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+    }
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+
+    &__title {
+        padding-bottom: 1px;
+        font-weight: 400;
+        font-size: $text-size;
+        line-height: 25px;
+
+        @include mob {
+            font-size: $text-size-mobile;
+        }
+    }
+
+    &__subtitle {
+        padding-bottom: 1px;
+        font-weight: 700;
+        font-size: $title-size;
+        line-height: 33px;
+
+        color: $grey;
+
+        @include mob {
+            font-size: $title-size-mobile;
+        }
+
+        &--margin {
+            margin-top: 8px;
+        }
+    }
+
+    p {
+        padding-bottom: 2px;
+        font-weight: 400;
+        font-size: $text-size;
+        line-height: 25px;
+
+        @include mob {
+            font-size: $text-size-mobile;
+        }
+    }
+
+    p:not(last-child) {
+        padding-bottom: 2px;
+    }
+}
+
+.hidden {
+    display: none;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: row;
+    gap: 90px;
+
+    @include mob {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    &__container {
+        width: 33%;
+        position: relative;
+
+        @include mob {
+            width: 100%;
+        }
+    }
+
+    &__button {
+        position: relative;
+        display: block;
+        width: 100%;
+        text-align: left;
+
+        background-color: $dark-grey;
+        border: 1px solid $white;
+        padding: 8px 25px 8px 10px;
+
+        font-family: $font-family;
+        font-size: $text-size;
+        font-weight: 400;
+        line-height: 25px;
+        color: $white;
+
+        cursor: pointer;
+
+        @include mob {
+            font-size: $text-size-mobile;
+        }
+
+        &:focus,
+        &--active {
+            box-shadow: 0 4px 8px rgba(26, 26, 26, 0.5);
+        }
+
+        &:after {
+            content: "";
+
+            position: absolute;
+            top: 45%;
+            right: 12px;
+            transform: translateY(-50%) rotate(135deg);
+
+            width: 11px;
+            height: 11px;
+            border-top: 2px solid $white;
+            border-right: 2px solid $white;
+
+            pointer-events: none;
+        }
+
+        &:hover {
+            background: $grey;
+        }
+    }
+
+    &__list {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 52px;
+        background: $dark-grey;
+        box-shadow: 0 4px 8px rgba(26, 26, 26, 0.5);
+        overflow: hidden;
+        width: 100%;
+        z-index: 1;
+
+        &--item {
+            border: 1px solid $white;
+            padding: 10px 25px 10px 10px;
+            cursor: pointer;
+
+            &:hover {
+                background: $grey;
+            }
+        }
+
+        &--visible {
+            display: block;
+        }
+
+        & li:not(:last-child) {
+            border-bottom: 0px;
+        }
+    }
+
+    &__input {
+        &--hidden {
+            display: none;
+        }
+    }
+}

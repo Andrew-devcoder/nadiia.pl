@@ -1,0 +1,73 @@
+@mixin containerCenter {
+    max-width: 1146px;
+    margin: 0 auto;
+    padding: 0 15px;
+    flex: 1 1 1146px;
+
+    // @media (max-width: 1024px) {
+    //     // max-width: pxToRem(900px);
+    // }
+}
+@mixin flexCenter {
+    display: flex;
+    align-items: center;
+}
+@mixin flexRowCenter {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+@mixin flexColumnCenter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+@mixin columnBetween {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex: auto;
+}
+@mixin rowBetween {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex: auto;
+}
+@mixin rowReverseBetween {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    flex: auto;
+}
+// *Breakpoints
+@mixin screen-lg {
+    max-width: $lg;
+}
+@mixin screen-md {
+    max-width: $md;
+}
+
+@mixin breakpoint-lg($lg) {
+    @media (max-width: $lg) {
+        @content;
+    }
+}
+
+@mixin breakpoint-md($md) {
+    @media (max-width: $md) {
+        @content;
+    }
+}
+
+@mixin breakpoint-mobile($mobile) {
+    @media (max-width: $mobile) {
+        @content;
+    }
+}
+
+@mixin mob {
+    @include breakpoint-mobile($mobile) {
+        @content;
+    }
+}

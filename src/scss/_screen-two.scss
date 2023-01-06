@@ -1,0 +1,95 @@
+//important section
+
+.screen-two {
+    background: $white;
+}
+
+.active {
+    text-decoration: underline;
+    color: $green;
+}
+
+.cards {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 24px;
+    row-gap: 71.9px;
+    padding: 80px 0 80px;
+    background: #ffffff;
+
+    @include breakpoint-lg($lg) {
+        justify-content: center;
+        gap: 80px;
+    }
+
+    @include breakpoint-md($md) {
+        padding: 60px 0;
+    }
+
+    @include mob {
+        gap: 20px;
+    }
+}
+
+.card {
+    position: relative;
+    width: 356px;
+    height: 300px;
+    padding-top: 18px;
+    border-radius: 23px;
+    box-shadow: -10px 14px 18px rgba(194, 194, 194, 0.25);
+    background: #ffffff;
+
+    @include breakpoint-md($md) {
+        width: 320px;
+    }
+
+    @include mob {
+        width: 356px;
+    }
+
+    &__title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 210px;
+        min-height: 65px;
+        font-weight: 700;
+        font-size: $title-size;
+        color: $dark-grey;
+        text-align: center;
+
+        @include mob {
+            font-size: $title-size-mobile;
+        }
+    }
+
+    &__img {
+        display: block;
+        margin: 20px auto 24px;
+    }
+
+    &__body {
+        position: absolute;
+        left: 41px;
+        top: 75px;
+        display: flex;
+        flex-direction: column;
+
+        &:first-child() {
+            margin-bottom: 14px;
+        }
+
+        &:not(first-child) {
+            gap: 4px;
+        }
+    }
+
+    &__button {
+        position: absolute;
+        bottom: 24px;
+        right: 39px;
+    }
+}

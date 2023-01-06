@@ -1,0 +1,43 @@
+.header {
+    @include flexCenter;
+    height: 50px;
+    background-color: $dark-grey;
+
+    &__items {
+        @include rowBetween;
+    }
+
+    @include breakpoint-mobile($mobile) {
+        display: none;
+    }
+}
+.icons {
+    display: flex;
+    align-content: center;
+    gap: 30px;
+}
+
+.language {
+    color: $white;
+}
+
+.switch-language {
+    @include flexCenter;
+    flex-direction: row;
+    gap: 30px;
+    font-family: Open Sans;
+    font-size: $text-size;
+    color: $white;
+
+    @include mob {
+        font-size: $text-size-mobile;
+    }
+
+    img {
+        margin-right: 90px;
+    }
+
+    &--active {
+        color: $green;
+    }
+}
