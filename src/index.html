@@ -3,7 +3,877 @@
     @@include('html/head.html', { "title":"main" })
     <body>
         @@include('html/header.html', { })
-        <main></main>
+        <main>
+            <nav class="nav">
+                <div class="container">
+                    <div class="nav__body">
+                        <div class="menu">
+                            <img
+                                class="menu__logo"
+                                src="./scr/img/header/logo.svg"
+                                alt=""
+                            />
+                            <img
+                                class="menu__logo--mob"
+                                src="./scr/img/header/logo-mob.png"
+                                alt=""
+                            />
+                            <div class="menu__items">
+                                <ul class="menu__section">
+                                    <li>
+                                        <a class="menu__link" href="">
+                                            Section 1<img
+                                                class="menu__arrow"
+                                                src="./scr/img/header/icons/arrow.svg"
+                                                alt=""
+                                        /></a>
+                                        <ul class="sub-menu__section">
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 1.1<img
+                                                        class="sub-menu__arrow"
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            1.1.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 1.2<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            1.2.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 1.3<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            1.3.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="menu__section">
+                                    <li>
+                                        <a class="menu__link" href="">
+                                            Section 2<img
+                                                class="menu__arrow"
+                                                src="./scr/img/header/icons/arrow.svg"
+                                                alt=""
+                                        /></a>
+                                        <ul class="sub-menu__section">
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 2.1<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            2.1.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 2.2<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            2.2.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 2.3<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            2.3.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="menu__section">
+                                    <li>
+                                        <a class="menu__link" href="">
+                                            Section 3<img
+                                                src="./scr/img/header/icons/arrow.svg"
+                                                alt=""
+                                        /></a>
+                                        <ul class="sub-menu__section">
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 3.1<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            3.1.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 3.2<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            3.2.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="menu__section">
+                                    <li>
+                                        <a class="menu__link" href="">
+                                            Section 4<img
+                                                src="./scr/img/header/icons/arrow.svg"
+                                                alt=""
+                                        /></a>
+                                        <ul class="sub-menu__section">
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 4.1<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            4.1.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a
+                                                    class="sub-menu__link"
+                                                    href=""
+                                                >
+                                                    Sub-section 4.2<img
+                                                        src="./scr/img/header/icons/arrow.svg"
+                                                        alt=""
+                                                /></a>
+                                                <ul
+                                                    class="sub-sub-menu__section"
+                                                >
+                                                    <li>
+                                                        <a
+                                                            class="sub-sub-menu__link"
+                                                            href=""
+                                                            >Sub-sub-section
+                                                            4.2.1</a
+                                                        >
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="exit">
+                            <button class="button button__fill">Log in</button>
+                            <button class="button button__border">
+                                Register
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <section class="screen-first">
+                <div class="container">
+                    <div class="swiper-one swiper-container" id="swiper-one">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="carousel">
+                                    <div class="text">
+                                        <h1 class="text__title">
+                                            Place a name of offer
+                                        </h1>
+                                        <p class="text__subtitle">
+                                            Place a subtitle here
+                                        </p>
+                                        <p class="text__content">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Ultricies imperdiet
+                                            quis platea erat lobortis
+                                            suspendisse. Dui ornare integer
+                                            facilisis volutpat viverra nullam
+                                            erat lacus nec.
+                                        </p>
+                                        <button class="button button__fill">
+                                            Read more
+                                        </button>
+                                    </div>
+                                    <img
+                                        class="first-img"
+                                        src="./scr/img/main/phone.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="carousel">
+                                    <div class="text">
+                                        <h1 class="text__title">
+                                            Place a name of offer #2
+                                        </h1>
+                                        <p class="text__subtitle">
+                                            Place a subtitle here
+                                        </p>
+                                        <p class="text__content">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Ultricies imperdiet
+                                            quis platea erat lobortis
+                                            suspendisse. Dui ornare integer
+                                            facilisis volutpat viverra nullam
+                                            erat lacus nec.
+                                        </p>
+                                        <button class="button button__fill">
+                                            Read more
+                                        </button>
+                                    </div>
+                                    <img
+                                        class="first-img"
+                                        src="./scr/img/main/phone.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="carousel">
+                                    <div class="text">
+                                        <h1 class="text__title">
+                                            Place a name of offer #3
+                                        </h1>
+                                        <p class="text__subtitle">
+                                            Place a subtitle here
+                                        </p>
+                                        <p class="text__content">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Ultricies imperdiet
+                                            quis platea erat lobortis
+                                            suspendisse. Dui ornare integer
+                                            facilisis volutpat viverra nullam
+                                            erat lacus nec.
+                                        </p>
+                                        <button class="button button__fill">
+                                            Read more
+                                        </button>
+                                    </div>
+                                    <img
+                                        class="first-img"
+                                        src="./scr/img/main/phone.png"
+                                        alt=""
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </section>
+            <section class="screen-two">
+                <div class="container">
+                    <div class="cards">
+                        <div class="card">
+                            <p class="card__title">
+                                How to stay legally in Poland?
+                            </p>
+                            <img
+                                class="card__img"
+                                src="./scr/img/main/cards/How to stay legally in Poland.svg"
+                                alt=""
+                            />
+                            <div class="card__button">
+                                <button class="button__card">
+                                    Read more<img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card__title">
+                                What rights do I have in Poland?
+                            </p>
+                            <img
+                                class="card__img"
+                                src="./scr/img/main/cards/What rights do I have in Poland.svg"
+                                alt=""
+                            />
+                            <div class="card__button">
+                                <button class="button__card">
+                                    Read more<img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card__title">Personal Profile</p>
+                            <img
+                                class="card__img"
+                                src="./scr/img/main/cards/Personal Profile.svg"
+                                alt=""
+                            />
+                            <div class="card__button">
+                                <button class="button__card">
+                                    Read more<img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card__title">Knowledge base</p>
+                            <img
+                                class="card__img"
+                                src="./scr/img/main/cards/knowledge base.svg"
+                                alt=""
+                            />
+                            <div class="card__button">
+                                <button class="button__card">
+                                    Read more<img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <p class="card__title">Marketplace</p>
+                            <img
+                                class="card__img"
+                                src="./scr/img/main/cards/Marketplace.svg"
+                                alt=""
+                            />
+                            <div class="card__button">
+                                <button class="button__card">
+                                    Read more<img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <h3 class="card__title">Na skróty</h3>
+                            <div class="card__body">
+                                <button class="button__card active">
+                                    Section<img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <button class="button__card">
+                                    Section
+                                    <img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <button class="button__card">
+                                    Section
+                                    <img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <button class="button__card">
+                                    Section
+                                    <img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <button class="button__card">
+                                    Section
+                                    <img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                                <button class="button__card">
+                                    Section
+                                    <img
+                                        src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                        alt=""
+                                    />
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="sliders">
+                <div class="container">
+                    <div class="swiper-two swiper-container" id="swiper-two">
+                        <h2 class="sliders__title">
+                            Najnowsze wpisy o fundacji
+                        </h2>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="slide">
+                                    <img
+                                        class="slide__img"
+                                        src="./scr/img/main/screen-three/card.png"
+                                        alt=""
+                                    />
+                                    <div class="slide__container">
+                                        <p class="slide__data">
+                                            3 November 2022
+                                        </p>
+                                        <h3 class="slide__title">
+                                            Name of article
+                                        </h3>
+                                        <p class="slide__text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Bibendum vestibulum ut
+                                            vitae at et justo Lorem ipsum dolor
+                                            sit amet consectetur adipisicing
+                                            elit. Iusto asperiores nostrum eaque
+                                            a mollitia, quidem ut placeat minus
+                                            nulla enim vitae inventore
+                                            consequatur nam id quia aut
+                                            provident culpa consequuntur!
+                                        </p>
+                                        <div class="slide__button">
+                                            <button
+                                                class="button button__slide"
+                                            >
+                                                Read
+                                                <img
+                                                    src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide">
+                                    <img
+                                        class="slide__img"
+                                        src="./scr/img/main/screen-three/card.png"
+                                        alt=""
+                                    />
+                                    <div class="slide__container">
+                                        <p class="slide__data">
+                                            3 November 2022
+                                        </p>
+                                        <h3 class="slide__title">
+                                            Name of article
+                                        </h3>
+                                        <p class="slide__text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Bibendum vestibulum ut
+                                            vitae at et justo leo.....
+                                        </p>
+                                        <div class="slide__button">
+                                            <button
+                                                class="button button__slide"
+                                            >
+                                                Read
+                                                <img
+                                                    src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide">
+                                    <img
+                                        class="slide__img"
+                                        src="./scr/img/main/screen-three/card.png"
+                                        alt=""
+                                    />
+                                    <div class="slide__container">
+                                        <p class="slide__data">
+                                            3 November 2022
+                                        </p>
+                                        <h3 class="slide__title">
+                                            Name of article
+                                        </h3>
+                                        <p class="slide__text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Bibendum vestibulum ut
+                                            vitae at et justo leo.....
+                                        </p>
+                                        <div class="slide__button">
+                                            <button
+                                                class="button button__slide"
+                                            >
+                                                Read
+                                                <img
+                                                    src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide">
+                                    <img
+                                        class="slide__img"
+                                        src="./scr/img/main/screen-three/card.png"
+                                        alt=""
+                                    />
+                                    <div class="slide__container">
+                                        <p class="slide__data">
+                                            3 November 2022
+                                        </p>
+                                        <h3 class="slide__title">
+                                            Name of article
+                                        </h3>
+                                        <p class="slide__text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Bibendum vestibulum ut
+                                            vitae at et justo leo.....
+                                        </p>
+                                        <div class="slide__button">
+                                            <button
+                                                class="button button__slide"
+                                            >
+                                                Read
+                                                <img
+                                                    src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide">
+                                    <img
+                                        class="slide__img"
+                                        src="./scr/img/main/screen-three/card.png"
+                                        alt=""
+                                    />
+                                    <div class="slide__container">
+                                        <p class="slide__data">
+                                            3 November 2022
+                                        </p>
+                                        <h3 class="slide__title">
+                                            Name of article
+                                        </h3>
+                                        <p class="slide__text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Bibendum vestibulum ut
+                                            vitae at et justo leo.....
+                                        </p>
+                                        <div class="slide__button">
+                                            <button
+                                                class="button button__slide"
+                                            >
+                                                Read
+                                                <img
+                                                    src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div class="slide">
+                                    <img
+                                        class="slide__img"
+                                        src="./scr/img/main/screen-three/card.png"
+                                        alt=""
+                                    />
+                                    <div class="slide__container">
+                                        <p class="slide__data">
+                                            3 November 2022
+                                        </p>
+                                        <h3 class="slide__title">
+                                            Name of article
+                                        </h3>
+                                        <p class="slide__text">
+                                            Lorem ipsum dolor sit amet
+                                            consectetur. Bibendum vestibulum ut
+                                            vitae at et justo leo.....
+                                        </p>
+                                        <div class="slide__button">
+                                            <button
+                                                class="button button__slide"
+                                            >
+                                                Read
+                                                <img
+                                                    src="./scr/img/main/cards/arrow-back-rounded.svg"
+                                                    alt=""
+                                                />
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <img
+                            class="swiper-button-next sliders__arrows"
+                            src="./scr/img/main/screen-three/arrow-back-rounded-fill.svg"
+                            alt=""
+                        />
+                        <img
+                            class="swiper-button-prev sliders__arrows sliders__arrows--rotate"
+                            src="./scr/img/main/screen-three/arrow-back-rounded-fill.svg"
+                            alt=""
+                        />
+                    </div>
+                    <div class="sliders__button">
+                        <button class="button button__border">View all</button>
+                    </div>
+                </div>
+            </section>
+            <section class="four">
+                <div class="container">
+                    <div class="four__body">
+                        <div class="four__text">
+                            <h2 class="four__title">
+                                Wypełnij formularz i skorzystaj z bezpłatnej
+                                konsultacji
+                            </h2>
+                            <button class="button button__fill">
+                                Wypełnij formularz
+                            </button>
+                        </div>
+                        <div class="four__img">
+                            <img
+                                src="./scr/img/main/screen-four/img.png"
+                                alt=""
+                            />
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="screen-five">
+                <div class="container">
+                    <h2 class="screen-five__title">
+                        Wspólpracujemy z wieloma instytucjami
+                    </h2>
+                    <div class="screen-five__row">
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h3 class="screen-five__text">
+                                Urząd do Spraw Cudzoziemców
+                            </h3>
+                        </div>
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h3 class="screen-five__text">
+                                Urząd do Spraw Cudzoziemców
+                            </h3>
+                        </div>
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h4 class="screen-five__text">
+                                Urząd do Spraw Cudzoziemców
+                            </h4>
+                        </div>
+                        <div class="creen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h4 class="screen-five__text">
+                                Urząd do Spraw Cudzoziemców
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="screen-five__button">
+                        <button class="button button__border">View all</button>
+                    </div>
+                    <h2 class="screen-five__title">Wspierają nas najlepsi</h2>
+                    <div class="screen-five__row">
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h3 class="screen-five__text">
+                                UNIA METROPOLII POLSKICH
+                            </h3>
+                        </div>
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h4 class="screen-five__text">
+                                UNIA METROPOLII POLSKICH
+                            </h4>
+                        </div>
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h4 class="screen-five__text">
+                                UNIA METROPOLII POLSKICH
+                            </h4>
+                        </div>
+                        <div class="screen-five__column">
+                            <img
+                                class="screen-five__logo"
+                                src="./scr/img/main/screen-five/logo.svg"
+                                alt=""
+                            />
+                            <h4 class="screen-five__text">
+                                UNIA METROPOLII POLSKICH
+                            </h4>
+                        </div>
+                    </div>
+                    <div class="screen-five__button">
+                        <button class="button button__border">View all</button>
+                    </div>
+                </div>
+            </section>
+        </main>
         @@include('html/footer.html', { })
         <script src="js/app.min.js"></script>
     </body>
