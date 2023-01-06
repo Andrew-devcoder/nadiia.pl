@@ -6,28 +6,30 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 
 const swiper = new Swiper();
 
+flsFunctions.swiperOne();
 
-var first = swiper('.swiper-one', {
-    scrollbar: {
-        el: '.swiper-scrollbar',
-        draggable: true,
-    },
-    touchRatio: 2,
-    grabCursor: true,
-    slidesPerView: 1,
-    watchOverflow: true,
-    spaceBetween: 1000,
-    // autoplay: {
-    //     delay: 1000,
-    //     stopOnLastSlide: true,
-    //     disableOnInteraction: false,
-    // },
-    speed: 2000,
-    freeMode: true, // можно скроллить как ленту без фиксации на блоке 
-    centeredSlides: true,
-});
 
-var two = swiper('.swiper-two', {
+// var first = new Swiper('.swiper-one', {
+//     scrollbar: {
+//         el: '.swiper-scrollbar',
+//         draggable: true,
+//     },
+//     touchRatio: 2,
+//     grabCursor: true,
+//     slidesPerView: 1,
+//     watchOverflow: true,
+//     spaceBetween: 1000,
+//     // autoplay: {
+//     //     delay: 1000,
+//     //     stopOnLastSlide: true,
+//     //     disableOnInteraction: false,
+//     // },
+//     speed: 2000,
+//     freeMode: true, // можно скроллить как ленту без фиксации на блоке 
+//     centeredSlides: true,
+// });
+
+var two = new Swiper('.swiper-two', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
