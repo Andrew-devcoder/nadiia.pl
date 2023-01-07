@@ -4,14 +4,19 @@
     padding: 80px 0;
     background: $light-grey;
     // box-sizing: border-box;
-    width: 100%;
-    overflow: hidden;
+    // width: 100%;
+    // overflow: hidden;
 
     @include breakpoint-md($md) {
         padding: 40px 0;
     }
     @include mob {
         display: none;
+    }
+
+    &__container {
+        margin: 0 auto;
+        max-width: 1146px;
     }
 
     &__title {
@@ -127,4 +132,5 @@
 
 .swiper-two {
     position: relative;
+    padding: 0 50px 0 14px;
 }

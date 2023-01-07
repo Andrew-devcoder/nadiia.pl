@@ -37,7 +37,7 @@ var two = new Swiper('.swiper-two', {
     slidesPerView: 4,
     watchOverflow: true,
     grabCursor: true,
-    spaceBetween: 30,
+    spaceBetween: 20,
     speed: 2000,
     nested: true,
 });
