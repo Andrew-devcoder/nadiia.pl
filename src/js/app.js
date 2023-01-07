@@ -8,33 +8,6 @@ flsFunctions.isWebp();
 // import 'swiper/css/navigation';
 // import 'swiper/css/pagination';
 
-const swiper = new Swiper('.swiper-one', {
-    // module: [FreeMode],
-    // FreeMode: {
-    //     // scrollbar: {
-    //     //     el: '.swiper-scrollbar',
-    //     //     draggable: true,
-    //     // },
-    //     touchRatio: 2,
-    //     grabCursor: true,
-    //     slidesPerView: 1,
-    //     watchOverflow: true,
-    //     spaceBetween: 1000,
-    // },
-    module: [Navigation],
-    Navigation: {
-        scrollbar: {
-            el: '.swiper-scrollbar',
-            draggable: true,
-        },
-        touchRatio: 2,
-        grabCursor: true,
-        slidesPerView: 1,
-        watchOverflow: true,
-        spaceBetween: 1000,
-    }
-});
-
 
 var first = new Swiper('.swiper-one', {
     scrollbar: {
@@ -56,7 +29,7 @@ var first = new Swiper('.swiper-one', {
     centeredSlides: true,
 });
 
-var two = Swiper('.swiper-two', {
+var two = new Swiper('.swiper-two', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
