@@ -13,7 +13,7 @@
   "author": "Andeveloper",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.27.11", 
+    "browser-sync": "^2.27.11",
     "del": "^6.1.1",
     "fs": "^0.0.1-security",
     "gulp": "^4.0.2",

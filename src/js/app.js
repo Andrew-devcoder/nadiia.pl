@@ -2,34 +2,61 @@ import * as flsFunctions from "./modules/function.js";
 
 flsFunctions.isWebp();
 
-import Swiper, { Navigation, Pagination } from 'swiper';
+// import Swiper, { FreeMode, Navigation, Pagination } from 'swiper';
 
-const swiper = new Swiper();
+// import 'swiper/css';
+// import 'swiper/css/navigation';
+// import 'swiper/css/pagination';
 
-flsFunctions.swiperOne();
+const swiper = new Swiper('.swiper-one', {
+    // module: [FreeMode],
+    // FreeMode: {
+    //     // scrollbar: {
+    //     //     el: '.swiper-scrollbar',
+    //     //     draggable: true,
+    //     // },
+    //     touchRatio: 2,
+    //     grabCursor: true,
+    //     slidesPerView: 1,
+    //     watchOverflow: true,
+    //     spaceBetween: 1000,
+    // },
+    module: [Navigation],
+    Navigation: {
+        scrollbar: {
+            el: '.swiper-scrollbar',
+            draggable: true,
+        },
+        touchRatio: 2,
+        grabCursor: true,
+        slidesPerView: 1,
+        watchOverflow: true,
+        spaceBetween: 1000,
+    }
+});
 
 
-// var first = new Swiper('.swiper-one', {
-//     scrollbar: {
-//         el: '.swiper-scrollbar',
-//         draggable: true,
-//     },
-//     touchRatio: 2,
-//     grabCursor: true,
-//     slidesPerView: 1,
-//     watchOverflow: true,
-//     spaceBetween: 1000,
-//     // autoplay: {
-//     //     delay: 1000,
-//     //     stopOnLastSlide: true,
-//     //     disableOnInteraction: false,
-//     // },
-//     speed: 2000,
-//     freeMode: true, // можно скроллить как ленту без фиксации на блоке 
-//     centeredSlides: true,
-// });
+var first = new Swiper('.swiper-one', {
+    scrollbar: {
+        el: '.swiper-scrollbar',
+        draggable: true,
+    },
+    touchRatio: 2,
+    grabCursor: true,
+    slidesPerView: 1,
+    watchOverflow: true,
+    spaceBetween: 1000,
+    // autoplay: {
+    //     delay: 1000,
+    //     stopOnLastSlide: true,
+    //     disableOnInteraction: false,
+    // },
+    speed: 2000,
+    freeMode: true,
+    centeredSlides: true,
+});
 
-var two = new Swiper('.swiper-two', {
+var two = Swiper('.swiper-two', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
@@ -41,7 +68,6 @@ var two = new Swiper('.swiper-two', {
     speed: 2000,
     nested: true,
 });
-
 
 const list = document.querySelectorAll('.switch-language a')
 list.forEach(item => {
