@@ -16,13 +16,35 @@
     &__body {
         @include flexCenter;
         flex-direction: row;
-        justify-content: space-between;
+        // justify-content: space-between;
+    }
+
+    &__logo {
+        padding-right: 10px;
+        justify-content: start;
+
+        @include mob {
+            display: none;
+        }
+
+        &--mob {
+            display: none;
+
+            @include mob {
+                display: block;
+                position: absolute;
+                bottom: 14px;
+                left: 24px;
+            }
+        }
     }
 }
 
 .menu {
     @include flexCenter;
     flex-direction: row;
+    justify-content: start;
+    flex: auto;
     color: $dark-grey;
 
     &__items {
@@ -78,25 +100,6 @@
             padding: 0;
         }
     }
-
-    &__logo {
-        padding-right: 10px;
-
-        @include mob {
-            display: none;
-        }
-
-        &--mob {
-            display: none;
-
-            @include mob {
-                display: block;
-                position: absolute;
-                bottom: 14px;
-                left: 24px;
-            }
-        }
-    }
 }
 
 .sub-menu {
@@ -150,6 +153,7 @@
 .exit {
     display: flex;
     gap: 32px;
+    justify-content: end;
 
     @include mob {
         display: none;
