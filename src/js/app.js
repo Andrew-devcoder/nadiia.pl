@@ -50,7 +50,6 @@ list.forEach(item => {
     })
 })
 
-
 let buttonAllCity = document.querySelector('.button__footer');
 let allCity = document.querySelector('div .hidden');
 
@@ -104,4 +103,31 @@ allButton.forEach(function (dropWrapper) {
         }
     });
 
+});
+
+
+// hover: change style buttons
+const allButtonBorder = document.querySelectorAll('.button__border')
+const allButtonFill = document.querySelectorAll('.button__fill')
+
+allButtonBorder.forEach(item => {
+    item.addEventListener('mouseover', (e) => {
+        item.classList.remove('button__border');
+        item.classList.add('button__fill');
+    })
+    item.addEventListener('mouseout', (e) => {
+        item.classList.remove('button__fill');
+        item.classList.add('button__border');
+    })
+});
+
+allButtonFill.forEach(item => {
+    item.addEventListener('mouseover', (e) => {
+        item.classList.remove('button__fill');
+        item.classList.add('button__border');
+    })
+    item.addEventListener('mouseout', (e) => {
+        item.classList.remove('button__border');
+        item.classList.add('button__fill');
+    })
 });
