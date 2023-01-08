@@ -657,28 +657,6 @@ ul.menu__section > li:hover a.menu__link > img {
     font-size: 60px;
   }
 }
-.sliders__arrows {
-  position: absolute;
-  top: 551px;
-  margin: auto;
-  margin-left: 920px;
-  cursor: pointer;
-  min-width: 100px;
-}
-.sliders__arrows--rotate {
-  transform: rotate(180deg);
-}
-@media (max-width: 1200px) {
-  .sliders__arrows {
-    margin-left: 778px;
-  }
-}
-@media (max-width: 992px) {
-  .sliders__arrows {
-    top: 650px;
-    margin-left: -11px;
-  }
-}
 .sliders__button {
   display: flex;
   justify-content: center;
@@ -750,7 +728,33 @@ ul.menu__section > li:hover a.menu__link > img {
 
 .swiper-two {
   position: relative;
-  padding: 0 50px 0 14px;
+  padding: 0 0 0 14px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  position: absolute;
+  top: 551px;
+  margin: auto;
+  margin-right: 0px;
+  cursor: pointer;
+  min-width: 100px;
+}
+@media (max-width: 992px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    top: 650px;
+  }
+}
+
+.swiper-button-prev {
+  margin-left: 950px;
+  transform: rotate(180deg);
+}
+@media (max-width: 992px) {
+  .swiper-button-prev {
+    margin-left: 0;
+  }
 }
 
 .four {

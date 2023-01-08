@@ -31,27 +31,28 @@
         }
     }
 
-    &__arrows {
-        position: absolute;
-        top: 551px;
-        margin: auto;
-        margin-left: 920px;
-        cursor: pointer;
-        min-width: 100px;
+    // &__arrows {
+    //     position: absolute;
+    //     top: 551px;
+    //     margin: auto;
+    //     margin-right: 0px;
+    //     cursor: pointer;
+    //     min-width: 100px;
 
-        &--rotate {
-            transform: rotate(180deg);
-        }
+    //     &--rotate {
+    //         margin-left: 950px;
+    //         transform: rotate(180deg);
+    //     }
 
-        @include breakpoint-lg($lg) {
-            margin-left: 778px;
-        }
+    //     @include breakpoint-lg($lg) {
+    //         margin-left: 778px;
+    //     }
 
-        @include breakpoint-md($md) {
-            top: 650px;
-            margin-left: -11px;
-        }
-    }
+    //     @include breakpoint-md($md) {
+    //         top: 650px;
+    //         margin-left: -11px;
+    //     }
+    // }
 
     &__button {
         display: flex;
@@ -132,5 +133,27 @@
 
 .swiper-two {
     position: relative;
-    padding: 0 50px 0 14px;
+    padding: 0 0 0 14px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 551px;
+    margin: auto;
+    margin-right: 0px;
+    cursor: pointer;
+    min-width: 100px;
+
+    @include breakpoint-md($md) {
+        top: 650px;
+    }
+}
+.swiper-button-prev {
+    margin-left: 950px;
+    transform: rotate(180deg);
+
+    @include breakpoint-md($md) {
+        margin-left: 0;
+    }
 }
