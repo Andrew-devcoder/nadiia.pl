@@ -103,10 +103,10 @@
     &__section {
         display: none;
         position: absolute;
-        top: 10px;
+        top: 30px;
         left: 0;
         min-width: max-content;
-        padding: 30px 0 0;
+        padding: 10px 0 0;
     }
 
     &__link {
@@ -162,4 +162,8 @@
 
 .sub-menu__section > li:hover .sub-sub-menu__section {
     display: block;
+}
+
+ul.menu__section > li:hover a.menu__link > img {
+    transform: rotate(0deg);
 }
