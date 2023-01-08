@@ -31,29 +31,6 @@
         }
     }
 
-    // &__arrows {
-    //     position: absolute;
-    //     top: 551px;
-    //     margin: auto;
-    //     margin-right: 0px;
-    //     cursor: pointer;
-    //     min-width: 100px;
-
-    //     &--rotate {
-    //         margin-left: 950px;
-    //         transform: rotate(180deg);
-    //     }
-
-    //     @include breakpoint-lg($lg) {
-    //         margin-left: 778px;
-    //     }
-
-    //     @include breakpoint-md($md) {
-    //         top: 650px;
-    //         margin-left: -11px;
-    //     }
-    // }
-
     &__button {
         display: flex;
         justify-content: center;

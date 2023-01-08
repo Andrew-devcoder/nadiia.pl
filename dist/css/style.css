@@ -844,6 +844,20 @@ ul.menu__section > li:hover a.menu__link > img {
   justify-content: space-between;
   padding: 50px 0;
 }
+@media (max-width: 992px) {
+  .screen-five__row {
+    flex-wrap: wrap;
+    max-width: 100%;
+    gap: 20px;
+    justify-content: center;
+  }
+}
+@media (max-width: 992px) {
+  .screen-five__column {
+    max-width: min-content;
+    width: 50%;
+  }
+}
 .screen-five__logo {
   padding-bottom: 12px;
 }
