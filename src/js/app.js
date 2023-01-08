@@ -2,14 +2,9 @@ import * as flsFunctions from "./modules/function.js";
 
 flsFunctions.isWebp();
 
-// import Swiper, { FreeMode, Navigation, Pagination } from 'swiper';
 
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
-
-
-var first = new Swiper('.swiper-one', {
+// Swipers 
+const first = new Swiper('.swiper-one', {
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
@@ -29,7 +24,19 @@ var first = new Swiper('.swiper-one', {
     centeredSlides: true,
 });
 
-var two = new Swiper('.swiper-two', {
+// autoswap the slides "first"
+let sliderBlock = document.querySelector('.swiper-one');
+
+sliderBlock.addEventListener("mouseleave", (event) => {
+    first.params.autoplay.disableOnInteraction = false;
+    first.params.autoplay.delay = 500;
+    first.autoplay.start();
+});
+sliderBlock.addEventListener("mouseenter", (event) => {
+    first.autoplay.stop();
+})
+
+const two = new Swiper('.swiper-two', {
     navigation: {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
