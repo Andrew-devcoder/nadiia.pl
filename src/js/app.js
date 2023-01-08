@@ -18,7 +18,7 @@ var first = new Swiper('.swiper-one', {
     grabCursor: true,
     slidesPerView: 1,
     watchOverflow: true,
-    spaceBetween: 1000,
+    spaceBetween: 100,
     // autoplay: {
     //     delay: 1000,
     //     stopOnLastSlide: true,
