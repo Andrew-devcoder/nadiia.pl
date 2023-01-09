@@ -15,6 +15,12 @@
         color: $white;
         border: 2px solid $green;
         background: $green;
+
+        &:hover {
+            color: $dark-grey;
+            background: rgba(0, 0, 0, 0);
+            transition: all 0.3s ease-in;
+        }
     }
 
     &__border {
@@ -22,9 +28,20 @@
         border: 2px solid $green;
         background: rgba(0, 0, 0, 0);
 
+        &:hover {
+            color: $white;
+            background: $green;
+            transition: all 0.3s ease-in;
+        }
+
         &--grey {
             color: $grey;
             border: 2px solid $grey;
+
+            &:hover {
+                border: 2px solid $green;
+                transition: all 0.3s ease-in;
+            }
         }
     }
 
@@ -37,14 +54,14 @@
         background: rgba(0, 0, 0, 0);
         color: $dark-grey;
 
+        &:hover {
+            scale: 1.05;
+            transition: all 0.3s ease-in;
+        }
+
         @include mob {
             font-size: $text-size-mobile;
         }
-
-        // &--margin-left {
-        //     margin: 0;
-        //     margin-left: 41px;
-        // }
     }
 
     &__slide {
@@ -52,6 +69,11 @@
         background: rgba(0, 0, 0, 0);
         display: flex;
         align-items: center;
+
+        &:hover {
+            scale: 1.05;
+            transition: all 0.3s ease-in;
+        }
     }
 
     &__footer {

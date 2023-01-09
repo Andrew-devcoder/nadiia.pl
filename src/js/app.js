@@ -114,41 +114,41 @@ allButton.forEach(function (dropWrapper) {
 
 
 // hover: change style buttons
-const allButtonBorder = document.querySelectorAll('.button__border')
-const allButtonBorderGrey = document.querySelectorAll('.button__border--grey')
-const allButtonFill = document.querySelectorAll('.button__fill')
+// const allButtonBorder = document.querySelectorAll('.button__border')
+// const allButtonBorderGrey = document.querySelectorAll('.button__border--grey')
+// const allButtonFill = document.querySelectorAll('.button__fill')
 
-allButtonBorder.forEach(item => {
-    item.addEventListener('mouseover', (e) => {
-        item.classList.remove('button__border');
-        item.classList.add('button__fill');
-    })
-    item.addEventListener('mouseout', (e) => {
-        item.classList.remove('button__fill');
-        item.classList.add('button__border');
-    })
-});
+// allButtonBorder.forEach(item => {
+//     item.addEventListener('mouseover', (e) => {
+//         item.classList.remove('button__border');
+//         item.classList.add('button__fill');
+//     })
+//     item.addEventListener('mouseout', (e) => {
+//         item.classList.remove('button__fill');
+//         item.classList.add('button__border');
+//     })
+// });
 
-allButtonBorderGrey.forEach(item => {
-    item.addEventListener('mouseover', (e) => {
-        item.classList.remove('button__border');
-        item.classList.remove('button__border--grey');
-        item.classList.add('button__fill');
-    })
-    item.addEventListener('mouseout', (e) => {
-        item.classList.remove('button__fill');
-        item.classList.add('button__border--grey');
-        item.classList.add('button__border');
-    })
-});
+// allButtonBorderGrey.forEach(item => {
+//     item.addEventListener('mouseover', (e) => {
+//         item.classList.remove('button__border');
+//         item.classList.remove('button__border--grey');
+//         item.classList.add('button__fill');
+//     })
+//     item.addEventListener('mouseout', (e) => {
+//         item.classList.remove('button__fill');
+//         item.classList.add('button__border--grey');
+//         item.classList.add('button__border');
+//     })
+// });
 
-allButtonFill.forEach(item => {
-    item.addEventListener('mouseover', (e) => {
-        item.classList.remove('button__fill');
-        item.classList.add('button__border');
-    })
-    item.addEventListener('mouseout', (e) => {
-        item.classList.remove('button__border');
-        item.classList.add('button__fill');
-    })
-});
+// allButtonFill.forEach(item => {
+//     item.addEventListener('mouseover', (e) => {
+//         item.classList.remove('button__fill');
+//         item.classList.add('button__border');
+//     })
+//     item.addEventListener('mouseout', (e) => {
+//         item.classList.remove('button__border');
+//         item.classList.add('button__fill');
+//     })
+// });
