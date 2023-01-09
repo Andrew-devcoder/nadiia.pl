@@ -13,7 +13,7 @@ const first = new Swiper('.swiper-one', {
     grabCursor: true,
     slidesPerView: 1,
     watchOverflow: true,
-    spaceBetween: 100,
+    // spaceBetween: 100,
     // autoplay: {
     //     delay: 1000,
     //     stopOnLastSlide: true,
@@ -22,6 +22,10 @@ const first = new Swiper('.swiper-one', {
     speed: 2000,
     freeMode: true,
     centeredSlides: true,
+    // centerInsufficientSlides: true
+    // centeredSlides: true
+    // centeredSlidesBounds: true,
+    // setWrapperSize: true,
 });
 
 // autoswap the slides "first"
@@ -35,6 +39,14 @@ sliderBlock.addEventListener("mouseleave", (event) => {
 sliderBlock.addEventListener("mouseenter", (event) => {
     first.autoplay.stop();
 })
+
+const mediaMob = window.matchMedia('(min-width: 500px)');
+
+if (mediaMob) {
+    /* the viewport is at least 400 pixels wide */
+    first.params.spaceBetweenSlides = 100;
+}
+
 
 const two = new Swiper('.swiper-two', {
     navigation: {

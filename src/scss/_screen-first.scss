@@ -29,6 +29,11 @@
     flex-direction: column;
     align-items: flex-start;
 
+    @include mob {
+        max-width: 100%;
+        padding: 0 20px 0 0;
+    }
+
     &__title {
         position: absolute;
         top: 148px;
@@ -44,8 +49,9 @@
 
         @include mob {
             position: relative;
+            top: 0;
             white-space: normal;
-            width: 400px;
+            max-width: 400px;
         }
     }
 
@@ -80,6 +86,7 @@
 
     @include mob {
         max-width: 100%;
+        margin: 0 auto;
     }
 }
 

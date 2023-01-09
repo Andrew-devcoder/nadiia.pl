@@ -95,7 +95,7 @@
     }
 }
 
-.swiper-wrapper {
+.swiper-two > .swiper-wrapper {
     padding: 59px 0 100px;
 
     @include breakpoint-lg($lg) {

@@ -472,6 +472,12 @@ ul.menu__section > li:hover a.menu__link > img {
   flex-direction: column;
   align-items: flex-start;
 }
+@media (max-width: 576px) {
+  .text {
+    max-width: 100%;
+    padding: 0 20px 0 0;
+  }
+}
 .text__title {
   position: absolute;
   top: 148px;
@@ -489,8 +495,9 @@ ul.menu__section > li:hover a.menu__link > img {
 @media (max-width: 576px) {
   .text__title {
     position: relative;
+    top: 0;
     white-space: normal;
-    width: 400px;
+    max-width: 400px;
   }
 }
 .text__subtitle {
@@ -526,6 +533,7 @@ ul.menu__section > li:hover a.menu__link > img {
 @media (max-width: 576px) {
   .first-img {
     max-width: 100%;
+    margin: 0 auto;
   }
 }
 
@@ -733,17 +741,17 @@ ul.menu__section > li:hover a.menu__link > img {
   align-items: center;
 }
 
-.swiper-wrapper {
+.swiper-two > .swiper-wrapper {
   padding: 59px 0 100px;
 }
 @media (max-width: 1200px) {
-  .swiper-wrapper {
+  .swiper-two > .swiper-wrapper {
     display: flex;
     gap: 35px;
   }
 }
 @media (max-width: 992px) {
-  .swiper-wrapper {
+  .swiper-two > .swiper-wrapper {
     gap: 96px;
   }
 }
