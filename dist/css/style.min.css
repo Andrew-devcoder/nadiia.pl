@@ -1159,6 +1159,13 @@ ul.menu__section > li:hover a.menu__link > img {
   border-right: 2px solid #fdfdfd;
   pointer-events: none;
 }
+.dropdown__button--clicked:after {
+  content: "";
+  position: absolute;
+  top: 55%;
+  right: 12px;
+  transform: translateY(-50%) rotate(315deg);
+}
 .dropdown__button:hover {
   background: #707070;
 }

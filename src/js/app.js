@@ -80,6 +80,7 @@ allButton.forEach(function (dropWrapper) {
     dropButton.addEventListener('click', function (e) {
         dropList.classList.toggle('dropdown__list--visible');
         this.classList.add('dropdown__button--active');
+        this.classList.toggle('dropdown__button--clicked');
     });
 
     // list : choose item 
@@ -97,6 +98,7 @@ allButton.forEach(function (dropWrapper) {
     document.addEventListener('click', function (e) {
         if (e.target !== dropButton) {
             dropButton.classList.remove('dropdown__button--active');
+            dropButton.classList.remove('dropdown__button--clicked');
             dropList.classList.remove('dropdown__list--visible');
         };
     });
