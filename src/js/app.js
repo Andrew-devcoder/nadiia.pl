@@ -43,8 +43,7 @@ sliderBlock.addEventListener("mouseenter", (event) => {
 const mediaMob = window.matchMedia('(min-width: 500px)');
 
 if (mediaMob) {
-    /* the viewport is at least 400 pixels wide */
-    first.params.spaceBetweenSlides = 100;
+    ;
 }
 
 
