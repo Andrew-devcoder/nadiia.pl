@@ -52,6 +52,7 @@
             top: 0;
             white-space: normal;
             max-width: 400px;
+            margin-bottom: 40px;
         }
     }
 
@@ -64,7 +65,7 @@
 
         @include mob {
             font-size: $title-size-mobile;
-            margin: 0;
+            margin: 0 0 17px;
         }
     }
 

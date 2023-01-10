@@ -498,6 +498,7 @@ ul.menu__section > li:hover a.menu__link > img {
     top: 0;
     white-space: normal;
     max-width: 400px;
+    margin-bottom: 40px;
   }
 }
 .text__subtitle {
@@ -510,7 +511,7 @@ ul.menu__section > li:hover a.menu__link > img {
 @media (max-width: 576px) {
   .text__subtitle {
     font-size: 24px;
-    margin: 0;
+    margin: 0 0 17px;
   }
 }
 .text__content {
