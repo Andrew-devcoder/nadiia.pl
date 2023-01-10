@@ -165,3 +165,23 @@ allButton.forEach(function (dropWrapper) {
 //         item.classList.add('button__fill');
 //     })
 // });
+
+
+// burger 
+let burgerButton = document.querySelector('.burger__button');
+let burgerMenu = document.querySelector('.burger__menu');
+
+burgerButton.addEventListener('click', function () {
+    burgerMenu.classList.toggle('burger__menu--active');
+});
+
+let burgerSection = document.querySelector('.burger__section');
+let subBurgerSection = document.querySelector('.sub-burger__section');
+let burgerLink = document.querySelector('.burger__link');
+
+burgerSection.addEventListener('click', function () {
+    subBurgerSection.classList.toggle('sub-burger__section--active');
+    burgerSection.classList.toggle('burger__section--active');
+    burgerLink.classList.toggle('burger__link--active');
+})
+

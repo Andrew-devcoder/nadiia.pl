@@ -292,7 +292,7 @@ footer {
   top: 0;
   display: flex;
   align-items: center;
-  height: 102px;
+  height: 103px;
   font-weight: 400;
   font-size: 20px;
   background-color: #fdfdfd;
@@ -300,7 +300,8 @@ footer {
 }
 @media (max-width: 576px) {
   .nav {
-    position: relative;
+    position: fixed;
+    width: 100%;
   }
 }
 .nav__body {
@@ -448,6 +449,7 @@ ul.menu__section > li:hover a.menu__link > img {
 @media (max-width: 992px) {
   .screen-first {
     padding: 18px 0 0;
+    margin-top: 103px;
   }
 }
 
@@ -1226,4 +1228,90 @@ ul.menu__section > li:hover a.menu__link > img {
 }
 .dropdown__input--hidden {
   display: none;
+}
+
+.burger {
+  display: none;
+}
+@media (max-width: 576px) {
+  .burger {
+    display: flex;
+    justify-content: end;
+    flex-direction: row-reverse;
+  }
+}
+.burger__button {
+  width: 33px;
+  height: 20px;
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+}
+.burger__button span {
+  width: 33px;
+  height: 2px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #222222;
+  transition: all 0.5s;
+}
+.burger__button span:nth-of-type(2) {
+  top: calc(50% - 8px);
+}
+.burger__button span:nth-of-type(3) {
+  top: calc(50% + 8px);
+}
+.burger__menu {
+  position: fixed;
+  top: 103px;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 15px;
+  background: #f3f3f3;
+  transform: translateX(-100%);
+  transition: transform 0.5s;
+}
+.burger__menu--active {
+  transform: translateX(0);
+}
+.burger__section {
+  display: flex;
+}
+.burger__section li {
+  position: relative;
+}
+.burger__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: #404040;
+}
+.burger__link--active img {
+  transform: rotate(360deg);
+}
+
+.sub-burger__section {
+  display: none;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  min-width: max-content;
+  padding: 10px 0 0;
+}
+.sub-burger__section--active {
+  display: block;
+}
+.sub-burger__link {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  color: #404040;
+  background: #f3f3f3;
 }
