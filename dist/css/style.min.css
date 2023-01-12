@@ -1302,7 +1302,6 @@ ul.menu__section > li:hover a.menu__link > img {
 
 .sub-burger__section {
   display: none;
-  position: absolute;
   top: 30px;
   left: 0;
   min-width: max-content;
