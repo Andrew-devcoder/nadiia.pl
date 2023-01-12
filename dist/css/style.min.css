@@ -1283,6 +1283,7 @@ ul.menu__section > li:hover a.menu__link > img {
 }
 .burger__section {
   display: flex;
+  flex-direction: column;
 }
 .burger__section li {
   position: relative;

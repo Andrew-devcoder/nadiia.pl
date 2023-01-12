@@ -52,6 +52,7 @@
 
     &__section {
         display: flex;
+        flex-direction: column;
 
         li {
             position: relative;

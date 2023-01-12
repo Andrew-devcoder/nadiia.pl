@@ -40,12 +40,6 @@ sliderBlock.addEventListener("mouseenter", (event) => {
     first.autoplay.stop();
 })
 
-const mediaMob = window.matchMedia('(min-width: 500px)');
-
-if (mediaMob) {
-    ;
-}
-
 
 const two = new Swiper('.swiper-two', {
     navigation: {
