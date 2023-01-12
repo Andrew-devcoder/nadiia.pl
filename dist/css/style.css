@@ -449,6 +449,10 @@ ul.menu__section > li:hover a.menu__link > img {
 @media (max-width: 992px) {
   .screen-first {
     padding: 18px 0 0;
+  }
+}
+@media (max-width: 576px) {
+  .screen-first {
     margin-top: 103px;
   }
 }
