@@ -2,6 +2,10 @@ body {
     overflow-x: hidden;
     font-family: $font-family;
 }
+
+body.__lock {
+    overflow: hidden;
+}
 h1 {
     font-size: $h1-size;
 

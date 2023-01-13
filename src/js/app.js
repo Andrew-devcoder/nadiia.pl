@@ -166,7 +166,9 @@ let burgerButton = document.querySelector('.burger__button');
 let burgerMenu = document.querySelector('.burger__menu');
 
 burgerButton.addEventListener('click', function () {
+    document.body.classList.toggle('__lock');
     burgerMenu.classList.toggle('burger__menu--active');
+    burgerButton.classList.toggle('burger__button--active');
 });
 
 let burgerSection = document.querySelector('.burger__section');

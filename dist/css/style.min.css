@@ -99,6 +99,10 @@ body {
   font-family: "Nunito Sans";
 }
 
+body.__lock {
+  overflow: hidden;
+}
+
 h1 {
   font-size: 60px;
 }
@@ -1255,21 +1259,37 @@ ul.menu__section > li:hover a.menu__link > img {
   z-index: 2;
   overflow: hidden;
 }
-.burger__button span {
-  width: 33px;
-  height: 2px;
+.burger__button span, .burger__button::after, .burger__button::before {
   position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 0;
+  height: 10%;
+  width: 100%;
+  transition: all 0.3s ease 0s;
   background-color: #222222;
-  transition: all 0.5s;
 }
-.burger__button span:nth-of-type(2) {
-  top: calc(50% - 8px);
+.burger__button::after, .burger__button::before {
+  content: "";
 }
-.burger__button span:nth-of-type(3) {
-  top: calc(50% + 8px);
+.burger__button::before {
+  top: 0;
+}
+.burger__button::after {
+  bottom: 0;
+}
+.burger__button span {
+  top: 50%;
+  transform: scale(1) translate(0, -50%);
+}
+.burger__button--active span {
+  transform: scale(0) translate(0, -50%);
+}
+.burger__button--active::before {
+  top: 50%;
+  transform: rotate(-45deg) translate(0, -50%);
+}
+.burger__button--active::after {
+  bottom: 50%;
+  transform: rotate(45deg) translate(0, 50%);
 }
 .burger__menu {
   position: fixed;
@@ -1284,6 +1304,7 @@ ul.menu__section > li:hover a.menu__link > img {
   background: #f3f3f3;
   transform: translateX(-100%);
   transition: transform 0.5s;
+  overflow: auto;
 }
 .burger__menu--active {
   transform: translateX(0);
