@@ -8,7 +8,7 @@
     }
 
     &__button {
-        width: 33px;
+        width: 32px;
         height: 20px;
         position: relative;
         z-index: 2;
@@ -19,10 +19,11 @@
         &::before {
             position: absolute;
             left: 0;
-            height: 10%;
+            height: 3px;
             width: 100%;
             transition: all 0.3s ease 0s;
-            background-color: #222222;
+            background-color: $dark-grey;
+            border-radius: 20px;
         }
 
         &::after,
@@ -78,6 +79,21 @@
         }
     }
 
+    &__sub-menu {
+        display: none;
+
+        a {
+            color: $grey;
+        }
+
+        &--active {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 19px;
+        }
+    }
+
     &__section {
         display: flex;
         flex-direction: column;
@@ -117,6 +133,22 @@
         gap: 20px;
         align-items: center;
         max-height: 100%;
+    }
+
+    &__sub-section {
+        display: none;
+
+        a {
+            padding: 10px;
+            color: $dark-grey;
+        }
+
+        &--active {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+        }
     }
 }
 

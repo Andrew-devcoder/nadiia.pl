@@ -184,9 +184,38 @@ burgerSection.addEventListener('click', function () {
     subBurgerSection.classList.toggle('sub-burger__section--active');
     burgerSection.classList.toggle('burger__section--active');
     burgerLink.classList.toggle('burger__link--active');
+});
+
+// sub-menu
+let subBurgerLink = document.querySelector('.sub-burger__link');
+let navLogoMob = document.querySelector('.nav__logo--mob');
+let searchInput = document.querySelector('.search__box');
+let burgerSubSection = document.querySelector('.burger__sub-section');
+let burgerSubMenu = document.querySelector('.burger__sub-menu');
+
+subBurgerLink.addEventListener('click', function () {
+    burgerSection.classList.remove('burger__section');
+    burgerSection.classList.add('hidden');
+    navLogoMob.classList.remove('nav__logo--mob');
+    navLogoMob.classList.add('hidden');
+    searchInput.classList.remove('search__box');
+    searchInput.classList.remove('search__box--active');
+    searchInput.classList.add('hidden');
+    burgerSubSection.classList.add('burger__sub-section--active');
+    burgerSubMenu.classList.add('burger__sub-menu--active');
+
+});
+
+burgerSubMenu.addEventListener('click', function () {
+    burgerSubMenu.classList.add('hidden');
+    burgerSubMenu.classList.remove('burger__sub-menu--active');
+    burgerSection.classList.add('burger__section');
+    burgerSection.classList.remove('hidden');
+    navLogoMob.classList.add('nav__logo--mob');
+    navLogoMob.classList.remove('hidden');
+    searchInput.classList.add('search__box--active');
+    searchInput.classList.add('search__box');
+    searchInput.classList.remove('hidden');
+    burgerSubSection.classList.remove('burger__sub-section--active');
 })
-
-
-
-
 
