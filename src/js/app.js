@@ -164,11 +164,16 @@ allButton.forEach(function (dropWrapper) {
 // burger 
 let burgerButton = document.querySelector('.burger__button');
 let burgerMenu = document.querySelector('.burger__menu');
+// input search 
+let searchBox = document.querySelector('.search__box')
+let searchText = document.querySelector('.search__text')
 
 burgerButton.addEventListener('click', function () {
     document.body.classList.toggle('__lock');
     burgerMenu.classList.toggle('burger__menu--active');
     burgerButton.classList.toggle('burger__button--active');
+    searchBox.classList.toggle('search__box--active');
+    searchText.classList.toggle('search__text--active');
 });
 
 let burgerSection = document.querySelector('.burger__section');
@@ -180,4 +185,8 @@ burgerSection.addEventListener('click', function () {
     burgerSection.classList.toggle('burger__section--active');
     burgerLink.classList.toggle('burger__link--active');
 })
+
+
+
+
 
