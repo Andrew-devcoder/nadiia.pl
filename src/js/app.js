@@ -164,9 +164,20 @@ allButton.forEach(function (dropWrapper) {
 // burger 
 let burgerButton = document.querySelector('.burger__button');
 let burgerMenu = document.querySelector('.burger__menu');
+let burgerSection = document.querySelector('.burger__section');
+let subBurgerSection = document.querySelector('.sub-burger__section');
+let burgerLink = document.querySelector('.burger__link');
+
 // input search 
 let searchBox = document.querySelector('.search__box')
 let searchText = document.querySelector('.search__text')
+
+// sub-menu
+let subBurgerLink = document.querySelector('.sub-burger__link');
+let navLogoMob = document.querySelector('.nav__logo--mob');
+let searchInput = document.querySelector('.search__box');
+let burgerSubSection = document.querySelector('.burger__sub-section');
+let burgerSubMenu = document.querySelector('.burger__sub-menu');
 
 burgerButton.addEventListener('click', function () {
     burgerButton.classList.toggle('burger__button--active');
@@ -194,23 +205,13 @@ burgerButton.addEventListener('click', function () {
     }
 });
 
-
-let burgerSection = document.querySelector('.burger__section');
-let subBurgerSection = document.querySelector('.sub-burger__section');
-let burgerLink = document.querySelector('.burger__link');
-
 burgerSection.addEventListener('click', function () {
     subBurgerSection.classList.toggle('sub-burger__section--active');
     burgerSection.classList.toggle('burger__section--active');
     burgerLink.classList.toggle('burger__link--active');
 });
 
-// sub-menu
-let subBurgerLink = document.querySelector('.sub-burger__link');
-let navLogoMob = document.querySelector('.nav__logo--mob');
-let searchInput = document.querySelector('.search__box');
-let burgerSubSection = document.querySelector('.burger__sub-section');
-let burgerSubMenu = document.querySelector('.burger__sub-menu');
+
 
 subBurgerLink.addEventListener('click', function () {
     burgerSection.classList.remove('burger__section');
@@ -237,6 +238,3 @@ burgerSubMenu.addEventListener('click', function () {
     searchInput.classList.remove('hidden');
     burgerSubSection.classList.remove('burger__sub-section--active');
 })
-
-// let cons = burgerButton.classList.contains('burger__button--active')
-// console.log(cons);

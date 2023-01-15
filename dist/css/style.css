@@ -1419,8 +1419,9 @@ ul.menu__section > li:hover a.menu__link > img {
 
 @media (max-width: 576px) {
   .search__box {
-    display: none;
     margin-left: 73px;
+    transition: all 0.3s ease 0s;
+    transform: scale(0) translate(-50%, 0);
   }
 }
 .search__text {
@@ -1435,9 +1436,12 @@ ul.menu__section > li:hover a.menu__link > img {
   background-repeat: no-repeat;
   background-position: 84px;
   caret-color: #d2d2d2;
+  transition: all 0.3s ease 0s;
+  transform: scale(0) translate(-50%, 0);
 }
 
 .search__box--active,
 .search__text--active {
   display: block;
+  transform: scale(1) translate(0, 0);
 }
