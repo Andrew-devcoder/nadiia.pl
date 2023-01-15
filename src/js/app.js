@@ -169,12 +169,31 @@ let searchBox = document.querySelector('.search__box')
 let searchText = document.querySelector('.search__text')
 
 burgerButton.addEventListener('click', function () {
-    document.body.classList.toggle('__lock');
-    burgerMenu.classList.toggle('burger__menu--active');
     burgerButton.classList.toggle('burger__button--active');
-    searchBox.classList.toggle('search__box--active');
-    searchText.classList.toggle('search__text--active');
+
+    if (burgerButton.classList.contains('burger__button--active') === true) {
+        document.body.classList.add('__lock');
+        burgerMenu.classList.add('burger__menu--active');
+        searchBox.classList.add('search__box--active');
+        searchBox.classList.add('search__box');
+        searchBox.classList.remove('hidden');
+        searchText.classList.add('search__text--active');
+        burgerSection.classList.add('burger__section');
+        burgerSection.classList.remove('hidden');
+    } else {
+        document.body.classList.remove('__lock');
+        burgerMenu.classList.remove('burger__menu--active');
+        searchBox.classList.remove('search__box--active');
+        searchText.classList.remove('search__text--active');
+        subBurgerSection.classList.remove('sub-burger__section--active');
+        burgerLink.classList.remove('burger__link--active');
+        burgerSubMenu.classList.remove('burger__sub-menu--active');
+        navLogoMob.classList.add('nav__logo--mob');
+        navLogoMob.classList.remove('hidden');
+        burgerSubSection.classList.remove('burger__sub-section--active');
+    }
 });
+
 
 let burgerSection = document.querySelector('.burger__section');
 let subBurgerSection = document.querySelector('.sub-burger__section');
@@ -219,3 +238,5 @@ burgerSubMenu.addEventListener('click', function () {
     burgerSubSection.classList.remove('burger__sub-section--active');
 })
 
+// let cons = burgerButton.classList.contains('burger__button--active')
+// console.log(cons);
