@@ -205,13 +205,27 @@ burgerButton.addEventListener('click', function () {
     }
 });
 
+// const sectionAll = document.querySelectorAll('.burger__section')
+// sectionAll.forEach(item => {
+//     item.addEventListener('click', () => {
+//         sectionAll.forEach(element => { element.classList.remove('burger__link--active'); });
+//         item.classList.add('burger__link--active');
+//     })
+// })
+
 burgerSection.addEventListener('click', function () {
     subBurgerSection.classList.toggle('sub-burger__section--active');
     burgerSection.classList.toggle('burger__section--active');
     burgerLink.classList.toggle('burger__link--active');
 });
 
-
+// const list = document.querySelectorAll('.switch-language a')
+// list.forEach(item => {
+//     item.addEventListener('click', (e) => {
+//         list.forEach(el => { el.classList.remove('switch-language--active'); });
+//         item.classList.add('switch-language--active')
+//     })
+// })
 
 subBurgerLink.addEventListener('click', function () {
     burgerSection.classList.remove('burger__section');
