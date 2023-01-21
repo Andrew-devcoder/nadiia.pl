@@ -207,13 +207,14 @@ burgerButton.addEventListener('click', function () {
     }
 });
 
-// menu burger and sub-menu
-burgerSection.onclick = (e) => {
-    console.log(e);
-    if (e.target.nodeName != 'A') return;
-    e.target.classList.toggle('burger__link--active');
-    e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
-}
+// // menu burger and sub-menu
+// burgerSection.onclick = (e) => {
+//     // console.log(e.target.text);
+//     if (e.target.nodeName != 'A') return;
+//     e.target.classList.toggle('burger__link--active');
+//     e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
+//     // console.log(subBurgerLink.target.innerText);
+// }
 
 
 subBurgerLink.addEventListener('click', function () {
@@ -241,3 +242,39 @@ burgerSubMenu.addEventListener('click', function () {
     searchInput.classList.remove('hidden');
     burgerSubSection.classList.remove('burger__sub-section--active');
 })
+
+
+// click sub burger menu
+
+// subBurgerLink
+// subBurgerLink
+// burgerLink
+
+function text(e) {
+    // console.log(e);
+    // burgerSubMenu.innerText = subBurgerLink.innerText;
+    // burgerSubMenu.classList.add('burger__sub-menu--active');
+    // burgerSubMenu.classList.remove('hidden');
+    // burgerSubMenu.classList.add('burger__sub-menu');
+    // console.log(burgerSubMenu.target)
+}
+
+subBurgerLink.addEventListener('click', text);
+
+
+function clickBurgerSection(e) {
+    // console.log(e);
+    if (e.target.nodeName != 'A') return;
+    e.target.classList.toggle('burger__link--active');
+    e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
+}
+
+// burgerSection.onclick = (e) => {
+//     // console.log(e.target.text);
+//     if (e.target.nodeName != 'A') return;
+//     e.target.classList.toggle('burger__link--active');
+//     e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
+//     // console.log(subBurgerLink.target.innerText);
+// }
+
+burgerSection.addEventListener('click', clickBurgerSection);

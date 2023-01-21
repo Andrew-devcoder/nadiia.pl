@@ -208,7 +208,6 @@
 .search {
     &__box {
         @include mob {
-            // display: none;
             margin-left: 73px;
             transition: all 0.3s ease 0s;
             transform: scale(0) translate(-50%, 0);
