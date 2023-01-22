@@ -207,74 +207,108 @@ burgerButton.addEventListener('click', function () {
     }
 });
 
-// // menu burger and sub-menu
-// burgerSection.onclick = (e) => {
-//     // console.log(e.target.text);
-//     if (e.target.nodeName != 'A') return;
-//     e.target.classList.toggle('burger__link--active');
-//     e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
-//     // console.log(subBurgerLink.target.innerText);
-// }
 
-
-subBurgerLink.addEventListener('click', function () {
-    burgerSection.classList.remove('burger__section');
-    burgerSection.classList.add('hidden');
-    navLogoMob.classList.remove('nav__logo--mob');
-    navLogoMob.classList.add('hidden');
-    searchInput.classList.remove('search__box');
-    searchInput.classList.remove('search__box--active');
-    searchInput.classList.add('hidden');
-    burgerSubSection.classList.add('burger__sub-section--active');
-    burgerSubMenu.classList.add('burger__sub-menu--active');
-
-});
-
-burgerSubMenu.addEventListener('click', function () {
-    burgerSubMenu.classList.add('hidden');
-    burgerSubMenu.classList.remove('burger__sub-menu--active');
-    burgerSection.classList.add('burger__section');
-    burgerSection.classList.remove('hidden');
-    navLogoMob.classList.add('nav__logo--mob');
-    navLogoMob.classList.remove('hidden');
-    searchInput.classList.add('search__box--active');
-    searchInput.classList.add('search__box');
-    searchInput.classList.remove('hidden');
-    burgerSubSection.classList.remove('burger__sub-section--active');
-})
-
-
-// click sub burger menu
-
-// subBurgerLink
-// subBurgerLink
-// burgerLink
-
-function text(e) {
-    // console.log(e);
-    // burgerSubMenu.innerText = subBurgerLink.innerText;
-    // burgerSubMenu.classList.add('burger__sub-menu--active');
-    // burgerSubMenu.classList.remove('hidden');
-    // burgerSubMenu.classList.add('burger__sub-menu');
-    // console.log(burgerSubMenu.target)
-}
-
-subBurgerLink.addEventListener('click', text);
-
-
+// open and close sub menu 
 function clickBurgerSection(e) {
-    // console.log(e);
+    console.log(e);
     if (e.target.nodeName != 'A') return;
+    closeAllSubMenu(e.target.nextElementSibling);
     e.target.classList.toggle('burger__link--active');
     e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
+
 }
 
-// burgerSection.onclick = (e) => {
-//     // console.log(e.target.text);
-//     if (e.target.nodeName != 'A') return;
-//     e.target.classList.toggle('burger__link--active');
-//     e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
-//     // console.log(subBurgerLink.target.innerText);
+function closeAllSubMenu(current = null) {
+    let parrents = [];
+    if (current) {
+        // console.dir(current);
+        let currentParrent = current.parentNode;
+        while (currentParrent) {
+            if (currentParrent.classList.contains('burger__section')) break;
+            if (currentParrent.nodeName === 'UL') parrents.push(currentParrent);
+            currentParrent = currentParrent.parentNode;
+        }
+    }
+    const subMenu = document.querySelectorAll('.burger__section ul');
+    Array.from(subMenu).forEach(item => {
+        if (item != current && !parrents.includes(item)) {
+            item.classList.remove('sub-burger__section--active');
+            if (item.previousElementSibling.nodeName === 'UL') {
+                item.previousElementSibling.classList.remove('burger__link--active')
+            }
+        }
+    });
+}
+
+// function closeParent() {
+//     if (subBurgerSection.target.nextElementSibling !== document.querySelector('.sub-burger__section--active'))
+//         burgerLink.classList.remove('burger__link--active')
 // }
 
 burgerSection.addEventListener('click', clickBurgerSection);
+burgerSection.onmouseleave = closeAllSubMenu;
+
+
+//
+// function clickSubBurgerSection() {
+//     burgerSubMenu.classList.add('burger__sub-menu--active');
+//     text();
+//     navLogoMob.classList.remove('nav__logo--mob');
+//     navLogoMob.classList.add('hidden');
+//     searchInput.classList.remove('search__box');
+//     searchInput.classList.remove('search__box--active');
+//     searchInput.classList.add('hidden');
+//     burgerLink.classList.add('hidden');
+//     burgerLink.classList.remove('burger__link');
+//     subBurgerLink.classList.remove('sub-burger__link');
+//     subBurgerLink.classList.remove('sub-burger__link--active');
+//     subBurgerLink.classList.add('hidden');
+// }
+
+// subBurgerLink.addEventListener('click', clickSubBurgerSection);
+
+
+
+// click go sub menu
+// subBurgerLink.addEventListener('click', function () {
+//     // burgerSection.classList.remove('burger__section');
+//     // burgerSection.classList.add('hidden');
+//     navLogoMob.classList.remove('nav__logo--mob');
+//     navLogoMob.classList.add('hidden');
+//     searchInput.classList.remove('search__box');
+//     searchInput.classList.remove('search__box--active');
+//     searchInput.classList.add('hidden');
+//     burgerSubSection.classList.add('burger__sub-section--active');
+//     burgerSubMenu.classList.add('burger__sub-menu--active');
+
+// });
+
+// click sub burger menu - change name title
+// let burgerSubMenuLink = document.querySelector('.burger__sub-menu-link')
+// function text(e) {
+//     // console.log(e);
+//     burgerSubMenuLink.innerText = subBurgerLink.innerText;
+// }
+
+// subBurgerLink.addEventListener('click', text);
+
+
+// click title sub menu for back burger menu
+// burgerSubMenu.addEventListener('click', function () {
+//     burgerSubMenu.classList.add('hidden');
+//     burgerSubMenu.classList.remove('burger__sub-menu--active');
+//     burgerSection.classList.add('burger__section');
+//     burgerSection.classList.remove('hidden');
+//     navLogoMob.classList.add('nav__logo--mob');
+//     navLogoMob.classList.remove('hidden');
+//     searchInput.classList.add('search__box--active');
+//     searchInput.classList.add('search__box');
+//     searchInput.classList.remove('hidden');
+//     burgerSubSection.classList.remove('burger__sub-section--active');
+//     burgerLink.classList.remove('hidden');
+//     burgerLink.classList.add('burger__link');
+//     subBurgerLink.classList.add('sub-burger__link');
+//     subBurgerLink.classList.remove('hidden');
+//     subBurgerLink.classList.remove('burger__link--active');
+//     burgerSubSection.classList.remove('sub-burger__section--active');
+// })

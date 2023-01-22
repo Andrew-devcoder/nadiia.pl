@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: Anton;
   font-display: swap;
@@ -1444,4 +1445,17 @@ ul.menu__section > li:hover a.menu__link > img {
 .search__text--active {
   display: flex;
   transform: scale(1) translate(0, 0);
+}
+
+.burger__sub-menu-link {
+  display: flex;
+  align-items: center;
+}
+
+br {
+  content: "";
+}
+
+br:after {
+  content: " ";
 }

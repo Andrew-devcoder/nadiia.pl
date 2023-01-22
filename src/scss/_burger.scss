@@ -239,3 +239,17 @@
     display: flex;
     transform: scale(1) translate(0, 0);
 }
+
+.burger__sub-menu-link {
+    display: flex;
+    align-items: center;
+}
+
+// пока что так
+// чтобы избавиться от br который добавляется после функции "text"
+br {
+    content: "";
+}
+br:after {
+    content: "\00a0";
+}
