@@ -1158,6 +1158,33 @@
                 </div>
             </section>
         </main>
+
+        <p
+            style="color: purple; display: block"
+            class="text-test"
+            id="text-test"
+        >
+            hello world
+        </p>
+        <style>
+            p.text-test {
+                color: green;
+                display: block;
+            }
+            #text-test {
+                display: block;
+                color: yellow;
+            }
+            .text-test {
+                display: none !important;
+                color: red !important;
+            }
+
+            /* p - 0000 0001  (!important 0001 0000 )
+            . - 0000 0010
+            # - 0000 0100
+            style - 0000 1000 */
+        </style>
         @@include('html/footer.html', { })
         <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
         <script src="js/app.min.js"></script>

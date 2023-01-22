@@ -209,13 +209,12 @@ burgerButton.addEventListener('click', function () {
 
 
 // open and close sub menu 
-function clickBurgerSection(e) {
-    console.log(e);
-    if (e.target.nodeName != 'A') return;
+const clickBurgerSection = (e) => {
+    // console.log(e);
+    // if (e.target.nodeName != 'A') return;
     closeAllSubMenu(e.target.nextElementSibling);
     e.target.classList.toggle('burger__link--active');
     e.target.nextElementSibling.classList.toggle('sub-burger__section--active');
-
 }
 
 function closeAllSubMenu(current = null) {
@@ -231,6 +230,7 @@ function closeAllSubMenu(current = null) {
     }
     const subMenu = document.querySelectorAll('.burger__section ul');
     Array.from(subMenu).forEach(item => {
+        // console.log(current);
         if (item != current && !parrents.includes(item)) {
             item.classList.remove('sub-burger__section--active');
             if (item.previousElementSibling.nodeName === 'UL') {
@@ -312,3 +312,14 @@ burgerSection.onmouseleave = closeAllSubMenu;
 //     subBurgerLink.classList.remove('burger__link--active');
 //     burgerSubSection.classList.remove('sub-burger__section--active');
 // })
+
+
+
+// const burgerNavLinks = document.querySelectorAll('.burger__link')
+
+// // console.log(burgerNavLinks);
+// for (let key in burgerNavLinks) {
+//     // debugger
+//     console.log(burgerNavLinks[key].innerText);
+// }
+
